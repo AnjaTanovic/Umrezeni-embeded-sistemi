@@ -50,11 +50,8 @@ void loop() {
         String payload = http.getString();
         //Serial.println(payload);
 
-        char json[1024];
-        payload.toCharArray(json, payload.length() + 1);
-
         JsonDocument doc;
-        deserializeJson(doc, json);
+        deserializeJson(doc, payload);
 
         const char* set_up = doc["setup"];
         const char* delivery = doc["delivery"];
