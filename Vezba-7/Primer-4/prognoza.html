@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<head>
+		<link rel="stylesheet" href="prognoza.css">
+		<script src="prognoza.js"></script>
+	</head>
+	<body>
+		<h1>Meteorolo&scaron;ki podaci</h1>
+		<form id = "unos_lokacije" onsubmit="api_call(); return false;">
+			<label for="lname">Unesite lokaciju:</label><br>
+			<input type="text" id="naziv_lokacije" name="lname"><br><br>
+			<input type="submit" value="Prikazi podatke">
+		</form> 
+		
+		<br>
+		
+		<div id = "vremenski_podaci">
+			<table>
+				<tr>
+					<td>Lokacija</td>
+					<td id = "lokacija">...</td>
+				</tr>
+				<tr>
+					<td>Temperatura</td>
+					<td id = "temperatura">...</td>
+				</tr>
+				<tr>
+					<td>Vla&zcaron;nost vazduha</td>
+					<td id = "vlaznost">...</td>
+				</tr>
+				<tr>
+					<td>Vazdu&scaron;ni pritisak</td>
+					<td id = "pritisak">...</td>
+				</tr>
+			</table>
+			
+			<img id = "ikonica" alt="Vremenska ikonica"></img>
+			<br>
+			<span id = "opis_vremena">...</span>
+		</div>
+		<script>document.getElementById("vremenski_podaci").style.display = "none"</script>
+	</body>
+</html>
